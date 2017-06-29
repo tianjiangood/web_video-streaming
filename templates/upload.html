@@ -1,0 +1,33 @@
+$def with(img_src,ret_src)
+
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=gbk" />
+	<title>Test Page</title>
+	<script type="text/javascript" src="/static/js/show_img.js?v=2017053102"></script>
+</head>
+<body>
+<h1> AIA Test Page </h1>
+<hr />
+<form method="POST" enctype="multipart/form-data" action="">
+<input type="file" name="fullpath" accept="image/*"/>
+<select name="method">
+<option value="SSD">SSD</option>
+<option value="YOLO">YOLO</option>
+</select>
+<br/>
+<input type="submit" />
+</form>
+
+<canvas id="img_canvas" width="640" height="480"/>
+$if img_src:
+	<script type="text/javascript">
+		test("img_canvas","$img_src","$ret_src");
+	</script>
+$else:
+	<script type="text/javascript">
+		test("img_canvas","","");
+	</script>
+
+</body>
+</html>
