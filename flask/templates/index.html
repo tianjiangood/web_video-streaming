@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <title>Object Detect Demo</title>
+  </head>
+  <body>
+    <h1>Object Detect Demo</h1>
+    <img src="{{ url_for('video_feed') }}" height=400>
+  </body>
+  
+  <form method="POST" enctype="multipart/form-data" action="">
+  <select name="method">
+  <option value="SSD">SSD</option>
+  <option value="YOLO">YOLO</option>
+  <option value="FACE">FACE</option>
+  </select>
+  </form>
+
+</html>
